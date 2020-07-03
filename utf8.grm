@@ -1,3 +1,8 @@
+# Parts taken from https://github.com/cadia-lvl/Icelandic-textnorm
+# Copyright 2017  Reykjavik University (Author: Inga Rún Helgadóttir)
+# Apache 2.0
+# Remainder: Copyright 2020 Jim O'Regan
+# Apache 2.0
 
 export alphabet = Optimize[
 	"a".utf8 | "á".utf8 | "b".utf8 | "c".utf8 | "d".utf8 | "e".utf8 |
@@ -12,3 +17,18 @@ export ALPHABET = Optimize[
 	"K".utf8 | "L".utf8 | "M".utf8 | "N".utf8 | "O".utf8 | "Ó".utf8 |
 	"P".utf8 | "Q".utf8 | "R".utf8 | "S".utf8 | "T".utf8 | "U".utf8 |
 	"Ú".utf8 | "V".utf8 | "W".utf8 | "X".utf8 | "Y".utf8 | "Z".utf8 ];
+
+# Probably won't need to distinguish, but just in case
+export svowels = Optimize[ "e".utf8 | "é".utf8 | "i".utf8 | "í".utf8 ];
+
+export bvowels = Optimize[ "a".utf8 | "á".utf8 | "o".utf8 | "ó".utf8 | "u".utf8 | "ú".utf8 ];
+
+export SVOWELS = Optimize[ "E".utf8 | "É".utf8 | "I".utf8 | "Í".utf8 ];
+
+export BVOWELS = Optimize[ "A".utf8 | "Á".utf8 | "O".utf8 | "Ó".utf8 | "U".utf8 | "Ú".utf8 ];
+
+export vowels = Optimize[ svowels | bvowels ];
+
+export VOWELS = Optimize[ SVOWELS | BVOWELS ];
+
+
