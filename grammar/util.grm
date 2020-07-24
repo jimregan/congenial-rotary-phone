@@ -1,4 +1,4 @@
-import '../byte.grm' as b;
+import 'byte.grm' as b;
 
 func I[expr] {
   return "" : expr;
