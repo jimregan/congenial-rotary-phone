@@ -1,0 +1,39 @@
+
+export milte =
+   ("1" : "míle")
+ | ("2" : "dhá mhíle")
+ | ("3" : "trí mhíle")
+ | ("4" : "ceithre mhíle")
+ | ("5" : "cúig mhíle")
+ | ("6" : "sé mhíle")
+ | ("7" : "seacht míle")
+ | ("8" : "ocht míle")
+ | ("9" : "naoi míle")
+;
+
+export ceadta =
+   ("1" : "céad")
+ | ("2" : "dhá chéad")
+ | ("3" : "trí chéad")
+ | ("4" : "ceithre chéad")
+ | ("5" : "cúig chéad")
+ | ("6" : "sé chéad")
+ | ("7" : "seacht gcéad")
+ | ("8" : "ocht gcéad")
+ | ("9" : "naoi gcéad")
+;
+
+export count_no_zero =
+   ("1" : "a haon")
+ | ("2" : "a dó")
+ | ("3" : "a trí")
+ | ("4" : "a ceathair")
+ | ("5" : "a cúig")
+ | ("6" : "a sé")
+ | ("7" : "a seacht")
+ | ("8" : "a hocht")
+ | ("9" : "a naoi")
+;
+
+export count_plus_zero = ("0" : "a náid") | count_no_zero;
+
