@@ -1,3 +1,5 @@
 # Partial reconstruction of Google's universal rules
 # as best as I can figure them out
+import 'byte.grm' as b;
+
 export d1to9 = Optimize[b.kDigit - "0"];
