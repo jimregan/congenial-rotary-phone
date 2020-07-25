@@ -1,0 +1,43 @@
+# Based on cadia-lvl/Icelandic-textnorm
+#
+import '../utf8.grm' as utf;
+import '../util.grm' as util;
+
+#########################################
+# Maps input of the form: '7/12/2010'
+#
+# into
+#
+# date { day: "7" month: "12" year: "2010" }
+#
+# Year is optional, '7/12' also parses into date
+#
+##########################################
+
+d = utf.digits;
+q = util.q;
+s = util.s;
+
+day = (("0".utf8)? d) | "1" d | "2" d | "30" | "31";
+
+# Months as digits: numbers from 1-12, single digits optionally preceded by "0"
+month = (("0".utf8)? d) | d | "10" | "11" | "12";
+
+year = ("1" | "2") d{3};
+
+dm =
+  util.I["date { "]
+  util.I["day: " q]
+  day
+  util.D["/".utf8]
+  util.I[q " month: " q]
+  month
+  (util.D["/".utf8]
+  util.I[q]
+  util.I[" year: " q]
+  year
+  util.I[q])?
+  util.I[" }"]
+;
+
+export DATE = Optimize[dm];
