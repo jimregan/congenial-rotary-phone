@@ -1,51 +1,25 @@
+# Apache 2.0
+# Based on en-toy
 import '../byte.grm' as b;
 import '../util.grm' as u;
 
 d = b.kDigit;
 q = u.q;
-# The weight is to override the analysis of "Jan." etc. as a separate word (see
-# word.grm).
-month_file = StringFile['months.tsv'] <-20>;
+
+month_file = StringFile['months.tsv'];
 
 # Allows both abbreviations and full names:
 month = month_file | Project[month_file, 'output'];
 
-# Any number from 1-31:
+# 1-31, optional '0'
+day_num = ("0" : "")? (d - "0") | "1" d | "2" d | "30" | "31";
 
-day = (d - "0") | "1" d | "2" d | "30" | "31";
+# Nós has 2ú, so there's no need to make this more complicated
+day_ord = "1d" | "2a" | day_num "ú".utf8 | day_num "adh";
 
-# Any four digit number beginning with 1 or 2
+day = day_num | day_ord;
 
 year = ("1" | "2") d{3};
-
-# Maps input of the form
-#
-# Jan. 3,? 1980
-#
-# or
-#
-# 3 Jan.,? 1980
-#
-# into
-#
-# date { month: "January" day: "3" year: "1980" }
-#
-# Etc.
-
-mdy =
-  u.I["date { "]
-  u.I["month: " q]
-  month
-  u.D[" "+]
-  u.I[q " day: " q]
-  day
-  u.D[","]?
-  u.D[" "+]
-  u.I[q " year: " q]
-  year
-  u.I[q]
-  u.I[" preserve_order: true"]
-  u.I[" }"];
 
 dmy =
   u.I["date { "]
@@ -62,4 +36,4 @@ dmy =
   u.I[" preserve_order: true"]
   u.I[" }"];
 
-export DATE = Optimize[mdy | dmy];
+export DATE = Optimize[dmy];
