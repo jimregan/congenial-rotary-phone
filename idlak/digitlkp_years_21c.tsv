@@ -1,0 +1,106 @@
+00	
+01	a haon
+02	a dó
+03	a trí
+04	a ceathair
+05	a cúig
+06	a sé
+07	a seacht
+08	a hocht
+09	a naoi
+1	a haon
+10	a deich
+11	a haon déag
+12	a dó dhéag
+13	a trí déag
+14	a ceathair déag
+15	a cúig déag
+16	a sé déag
+17	a seacht déag
+18	a hocht déag
+19	a naoi déag
+2	a dó
+20	fiche
+21	fiche a haon
+22	fiche a dó
+28	fiche a hocht
+3	a trí
+30	tríocha
+31	tríocha a haon
+32	tríocha a dó
+38	tríocha a hocht
+4	a ceathair
+40	 daichead
+41	daichead a haon
+42	daichead a dó
+48	daichead a hocht
+5	a cúig
+50	caoga
+51	caoga a haon
+52	caoga a dó
+58	caoga a hocht
+6	a sé
+60	seasca
+61	seasca a haon
+62	seasca a dó
+68	seasca a hocht
+7	a seacht
+70	seachtó
+71	seachtó a haon
+72	seachtó a dó
+78	seachtó a hocht
+8	a hocht
+80	ochtó
+81	ochtó a haon
+82	ochtó a dó
+88	ochtó a hocht","9	a naoi
+90	nócha
+91	nócha a haon
+92	nócha a dó
+98	nócha a hocht
+100	céad
+200	dhá chéad
+300	trí chéad
+400	ceithre chéad
+500	cúig chéad
+600	sé chéad
+700	seacht gcéad
+800	ocht gcéad
+900	naoi gcéad
+1000	míle
+1001	míle a haon
+1002	míle a dó
+1003	míle a trí
+1004	míle a ceathair
+1005	míle a cúig
+1006	míle a sé
+1007	míle a seacht
+1008	míle a hocht
+1009	míle a naoi
+2000	dhá mhíle
+2001	dhá mhíle a haon
+2002	dhá mhíle a dó
+2003	dhá mhíle a trí
+2004	dhá mhíle a ceathair
+2005	dhá mhíle a cúig
+2006	dhá mhíle a sé
+2007	dhá mhíle a seacht
+2008	dhá mhíle a hocht
+2009	dhá mhíle a naoi
+tens_join	
+billion	billiún
+billion_join	
+billion_plural	billiún
+hundred	céad
+hundred_join	
+hundred_plural	céad
+million	milliún
+million_join	
+million_plural	milliún
+thousand	míle
+thousand_join	
+thousand_plural	míle
+hundred_thousand	céad míle
+hundred_thousand_plural	céad míle
+hundred_thousand_join	 
+-	lúide"
