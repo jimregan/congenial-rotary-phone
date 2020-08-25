@@ -61,7 +61,7 @@ export u8_punct = Optimize[
            "°".utf8 | "º".utf8 | "\[".utf8 | "\]".utf8 | "´".utf8 |
            "…".utf8 | "+".utf8 | "*".utf8 ];
 
-stuff = Optimize[ "²".utf8 | "³".utf8 | "&".utf8 | "¼".utf8 | "¾".utf8 | "½".utf8 | "$".utf8];
+stuff = Optimize[ "²".utf8 | "³".utf8 | "&".utf8 | "¼".utf8 | "¾".utf8 | "½".utf8 | "$".utf8 | "£".utf8 | "€".utf8 ];
 
 export digits = Optimize[
         "1".utf8 | "2".utf8 | "3".utf8 | "4".utf8 | "5".utf8 |
@@ -72,6 +72,8 @@ export dTeens = Optimize[
          "15".utf8 | "16".utf8 | "17".utf8 | "18".utf8 | "19".utf8 ];
 
 export whole_alphabet = Optimize[alphabet | ALPHABET | " ".utf8 | u8_punct | digits | stuff];
+
+export non_alpha = [" ".utf8 | u8_punct | digits | stuff];
 
 export space = Optimize[
     " ".utf8 | "\t".utf8 | "\n".utf8 | "\r".utf8
