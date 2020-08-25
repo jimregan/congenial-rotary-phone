@@ -8,9 +8,11 @@ d = b.kDigit;
 q = u.q;
 
 month_file = StringFile['months.tsv', 'utf8', 'utf8'];
-
+month_num = StringFile['../common/months.tsv', 'utf8', 'utf8'];
 # Allows both abbreviations and full names:
-month = month_file | Project[month_file, 'output'];
+month_text = month_file | Project[month_file, 'output'];
+
+month = Optimize[month_text @ month_num];
 
 # 1-31, optional '0'
 day_num = ("0" : "")? (d - "0") | "1" d | "2" d | "30" | "31";
@@ -29,12 +31,41 @@ dmy =
   u.D[" "+]
   u.I[q " month: " q]
   month
+  u.I[q]
   (u.D[","]?
   u.D[" "+]
-  u.I[q " year: " q]
+  u.I[" year: " q]
   year
   u.I[q])?
   u.I[" preserve_order: true"]
   u.I[" }"];
 
-export DATE = Optimize[dmy];
+#########################################
+# Maps input of the form: '7/12/2010'
+#
+# into
+#
+# date { day: "7" month: "12" year: "2010" }
+#
+# Year is optional, '7/12' also parses into date
+#
+##########################################
+
+month_digit = (("0")? d) | d | "10" | "11" | "12";
+
+dm =
+  u.I["date { "]
+  u.I["day: " q]
+  day
+  u.D["/".utf8]
+  u.I[q " month: " q]
+  month_digit
+  (u.D["/".utf8]
+  u.I[q]
+  u.I[" year: " q]
+  year
+  u.I[q])?
+  u.I[" }"]
+;
+
+export DATE = Optimize[dmy | dm];
