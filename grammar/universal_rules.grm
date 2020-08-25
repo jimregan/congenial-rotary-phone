@@ -3,3 +3,6 @@
 import 'byte.grm' as b;
 
 export d1to9 = Optimize[b.kDigit - "0"];
+export kAlpha = Optimize[b.kAlpha];
+export kUpper = Optimize[b.kUpper];
+export kLower = Optimize[b.kLower];
