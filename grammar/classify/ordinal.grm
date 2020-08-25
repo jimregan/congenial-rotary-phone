@@ -5,7 +5,9 @@ d = b.kDigit;
 q = u.q;
 
 # 300 -> cardinal { integer: "300"}
-export simple_ord = (("1d".utf8 : "1".utf8) | ("2a".utf8 : "2".utf8) | d+ ("ú".utf8 : "".utf8) | d+ ("adh".utf8 : "".utf8));
+export simple_ord = (("1d".utf8 : "1".utf8) | ("2a".utf8 : "2".utf8) | 
+                      d+ ("ú".utf8 : "".utf8) | d+ ("u".utf8 : "".utf8) |
+                      d+ ("adh".utf8 : "".utf8));
 
 ordinal =
   u.I["ordinal { "]
