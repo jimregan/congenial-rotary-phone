@@ -60,8 +60,8 @@ dm =
   u.D["/".utf8]
   u.I[q " month: " q]
   month_digit
-  (u.D["/".utf8]
   u.I[q]
+  (u.D["/".utf8]
   u.I[" year: " q]
   year
   u.I[q])?
