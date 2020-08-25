@@ -1,0 +1,18 @@
+import '../byte.grm' as b;
+import '../util.grm' as u;
+
+d = b.kDigit;
+q = u.q;
+
+# 300 -> cardinal { integer: "300"}
+simple_ord = ("1d" : "1" | "2a" : "2" | d+ ("ú".utf8 : "".utf8) | d+ ("adh" : "");
+
+cardinal =
+  u.I["ordinal { "]
+  u.I["integer: " q]
+  simple_ord
+  u.I[q]
+  u.I[" }"]
+;
+
+export ORDINAL = Optimize[ordinal];
