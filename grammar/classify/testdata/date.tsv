@@ -1,2 +1,4 @@
 DATE	11/8	date { day: "11" month: "8" }
 DATE	11/8/2020	date { day: "11" month: "8" year: "2020" }
+DATE	01/08/2020	date { day: "1" month: "8" year: "2020" }
+DATE	3ú Lún 2020	date { day: "3" month: "8" year: "2020" }
