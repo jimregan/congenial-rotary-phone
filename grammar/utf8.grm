@@ -73,7 +73,7 @@ export dTeens = Optimize[
 
 export whole_alphabet = Optimize[alphabet | ALPHABET | " ".utf8 | u8_punct | digits | stuff];
 
-export non_alpha = [" ".utf8 | u8_punct | digits | stuff];
+export non_alpha = Optimize[" ".utf8 | u8_punct | digits | stuff];
 
 export space = Optimize[
     " ".utf8 | "\t".utf8 | "\n".utf8 | "\r".utf8
