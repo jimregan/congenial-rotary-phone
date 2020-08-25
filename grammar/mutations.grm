@@ -1,0 +1,38 @@
+s_lc =  ("b".utf8 : "bh".utf8) | ("c".utf8 : "ch".utf8) |
+	("d".utf8 : "dh".utf8) | ("f".utf8 : "fh".utf8) |
+	("g".utf8 : "gh".utf8) | ("m".utf8 : "mh".utf8) |
+	("p".utf8 : "ph".utf8) | ("s".utf8 : "sh".utf8) |
+	("t".utf8 : "th".utf8);
+
+uc_lc = ("b".utf8 : "mb".utf8) | ("c".utf8 : "gc".utf8) |
+	("d".utf8 : "nd".utf8) | ("f".utf8 : "bhf".utf8) |
+	("g".utf8 : "ng".utf8) | ("p".utf8 : "bp".utf8) |
+	("t".utf8 : "dt".utf8);
+
+uc_uc = ("B".utf8 : "mB".utf8) | ("C".utf8 : "gC".utf8) |
+	("D".utf8 : "nD".utf8) | ("F".utf8 : "bhF".utf8) |
+	("G".utf8 : "nG".utf8) | ("P".utf8 : "bP".utf8) |
+	("T".utf8 : "dT".utf8);
+
+
+uv_lc = ("a".utf8 : "n-a".utf8) |
+	("á".utf8 : "n-á".utf8) |
+	("e".utf8 : "n-e".utf8) |
+	("é".utf8 : "n-é".utf8) |
+	("i".utf8 : "n-i".utf8) |
+	("í".utf8 : "n-í".utf8) |
+	("o".utf8 : "n-o".utf8) |
+	("ó".utf8 : "n-ó".utf8) |
+	("u".utf8 : "n-u".utf8) |
+	("ú".utf8 : "n-ú".utf8);
+
+uv_uc = ("A".utf8 : "nA".utf8) |
+	("Á".utf8 : "nÁ".utf8) |
+	("E".utf8 : "nE".utf8) |
+	("É".utf8 : "nÉ".utf8) |
+	("I".utf8 : "nI".utf8) |
+	("Í".utf8 : "nÍ".utf8) |
+	("O".utf8 : "nO".utf8) |
+	("Ó".utf8 : "nÓ".utf8) |
+	("U".utf8 : "nU".utf8) |
+	("Ú".utf8 : "nÚ".utf8);
