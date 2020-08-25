@@ -1,32 +1,37 @@
+# séimhiú (lenition): lower case
 s_lc =  ("b".utf8 : "bh".utf8) | ("c".utf8 : "ch".utf8) |
 	("d".utf8 : "dh".utf8) | ("f".utf8 : "fh".utf8) |
 	("g".utf8 : "gh".utf8) | ("m".utf8 : "mh".utf8) |
 	("p".utf8 : "ph".utf8) | ("s".utf8 : "sh".utf8) |
 	("t".utf8 : "th".utf8);
 
+# séimhiú (lenition): title case
 s_tc =  ("B".utf8 : "Bh".utf8) | ("C".utf8 : "Ch".utf8) |
 	("D".utf8 : "Dh".utf8) | ("F".utf8 : "Fh".utf8) |
 	("G".utf8 : "Gh".utf8) | ("M".utf8 : "Mh".utf8) |
 	("P".utf8 : "Ph".utf8) | ("S".utf8 : "Sh".utf8) |
 	("T".utf8 : "Th".utf8);
 
+# séimhiú (lenition): upper case
 s_uc =  ("B".utf8 : "BH".utf8) | ("C".utf8 : "CH".utf8) |
 	("D".utf8 : "DH".utf8) | ("F".utf8 : "FH".utf8) |
 	("G".utf8 : "GH".utf8) | ("M".utf8 : "MH".utf8) |
 	("P".utf8 : "PH".utf8) | ("S".utf8 : "SH".utf8) |
 	("T".utf8 : "TH".utf8);
 
+# urú (eclipsis): lower case consonants
 uc_lc = ("b".utf8 : "mb".utf8) | ("c".utf8 : "gc".utf8) |
 	("d".utf8 : "nd".utf8) | ("f".utf8 : "bhf".utf8) |
 	("g".utf8 : "ng".utf8) | ("p".utf8 : "bp".utf8) |
 	("t".utf8 : "dt".utf8);
 
+# urú (eclipsis): upper case consonants
 uc_uc = ("B".utf8 : "mB".utf8) | ("C".utf8 : "gC".utf8) |
 	("D".utf8 : "nD".utf8) | ("F".utf8 : "bhF".utf8) |
 	("G".utf8 : "nG".utf8) | ("P".utf8 : "bP".utf8) |
 	("T".utf8 : "dT".utf8);
 
-
+# urú (eclipsis): lower case vowels
 uv_lc = ("a".utf8 : "n-a".utf8) |
 	("á".utf8 : "n-á".utf8) |
 	("e".utf8 : "n-e".utf8) |
@@ -38,6 +43,7 @@ uv_lc = ("a".utf8 : "n-a".utf8) |
 	("u".utf8 : "n-u".utf8) |
 	("ú".utf8 : "n-ú".utf8);
 
+# urú (eclipsis): upper case vowels
 uv_uc = ("A".utf8 : "nA".utf8) |
 	("Á".utf8 : "nÁ".utf8) |
 	("E".utf8 : "nE".utf8) |
@@ -49,6 +55,7 @@ uv_uc = ("A".utf8 : "nA".utf8) |
 	("U".utf8 : "nU".utf8) |
 	("Ú".utf8 : "nÚ".utf8);
 
+# urú (eclipsis): lower case vowels to upper case
 uv_lu = ("n-a".utf8 : "nA".utf8) |
 	("n-á".utf8 : "nÁ".utf8) |
 	("n-e".utf8 : "nE".utf8) |
