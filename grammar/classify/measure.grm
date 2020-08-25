@@ -3,7 +3,7 @@ import '../util.grm' as u;
 
 d = b.kDigit;
 q = u.q;
-measures = StringFile['measure.tsv'];
+measures = StringFile['measure.tsv', 'utf8', 'utf8'];
 
 # Maps input of the form
 #

@@ -6,7 +6,7 @@ import '../util.grm' as u;
 d = b.kDigit;
 q = u.q;
 
-month_file = StringFile['months.tsv'];
+month_file = StringFile['months.tsv', 'utf8', 'utf8'];
 
 # Allows both abbreviations and full names:
 month = month_file | Project[month_file, 'output'];
