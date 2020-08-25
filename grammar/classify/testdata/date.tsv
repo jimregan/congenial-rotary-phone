@@ -1,0 +1,2 @@
+DATE	11/8	date { day: "11" month: "8" }
+DATE	11/8/2020	date { day: "11" month: "8" year: "2020" }
