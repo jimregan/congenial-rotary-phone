@@ -4,6 +4,18 @@ s_lc =  ("b".utf8 : "bh".utf8) | ("c".utf8 : "ch".utf8) |
 	("p".utf8 : "ph".utf8) | ("s".utf8 : "sh".utf8) |
 	("t".utf8 : "th".utf8);
 
+s_tc =  ("B".utf8 : "Bh".utf8) | ("C".utf8 : "Ch".utf8) |
+	("D".utf8 : "Dh".utf8) | ("F".utf8 : "Fh".utf8) |
+	("G".utf8 : "Gh".utf8) | ("M".utf8 : "Mh".utf8) |
+	("P".utf8 : "Ph".utf8) | ("S".utf8 : "Sh".utf8) |
+	("T".utf8 : "Th".utf8);
+
+s_uc =  ("B".utf8 : "BH".utf8) | ("C".utf8 : "CH".utf8) |
+	("D".utf8 : "DH".utf8) | ("F".utf8 : "FH".utf8) |
+	("G".utf8 : "GH".utf8) | ("M".utf8 : "MH".utf8) |
+	("P".utf8 : "PH".utf8) | ("S".utf8 : "SH".utf8) |
+	("T".utf8 : "TH".utf8);
+
 uc_lc = ("b".utf8 : "mb".utf8) | ("c".utf8 : "gc".utf8) |
 	("d".utf8 : "nd".utf8) | ("f".utf8 : "bhf".utf8) |
 	("g".utf8 : "ng".utf8) | ("p".utf8 : "bp".utf8) |
