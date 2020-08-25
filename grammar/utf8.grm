@@ -18,7 +18,7 @@ export ALPHABET = Optimize[
 	"P".utf8 | "Q".utf8 | "R".utf8 | "S".utf8 | "T".utf8 | "U".utf8 |
 	"Ú".utf8 | "V".utf8 | "W".utf8 | "X".utf8 | "Y".utf8 | "Z".utf8 ];
 
-export to_lower_basic = Optimize[
+export to_lower_basic_char = Optimize[
 	("A".utf8 : "a".utf8) | ("Á".utf8 : "á".utf8) | ("B".utf8 : "b".utf8) |
 	("C".utf8 : "c".utf8) | ("D".utf8 : "d".utf8) | ("E".utf8 : "e".utf8) |
 	("É".utf8 : "é".utf8) | ("F".utf8 : "d".utf8) | ("G".utf8 : "g".utf8) |
@@ -30,6 +30,10 @@ export to_lower_basic = Optimize[
 	("U".utf8 : "u".utf8) | ("Ú".utf8 : "ú".utf8) | ("V".utf8 : "v".utf8) |
 	("W".utf8 : "w".utf8) | ("X".utf8 : "x".utf8) | ("Y".utf8 : "y".utf8) |
 	("Z".utf8 : "z".utf8)]; 
+
+export to_upper_basic_char = Invert[to_lower_basic_char];
+export to_lower_basic = to_lower_basic_char*;
+export to_upper_basic = to_upper_basic_char*;
 
 # Probably won't need to distinguish, but just in case
 export svowels = Optimize[ "e".utf8 | "é".utf8 | "i".utf8 | "í".utf8 ];
