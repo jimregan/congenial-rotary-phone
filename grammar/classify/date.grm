@@ -2,6 +2,7 @@
 # Based on en-toy
 import '../byte.grm' as b;
 import '../util.grm' as u;
+import 'ordinal.grm' as o;
 
 d = b.kDigit;
 q = u.q;
@@ -15,7 +16,7 @@ month = month_file | Project[month_file, 'output'];
 day_num = ("0" : "")? (d - "0") | "1" d | "2" d | "30" | "31";
 
 # Nós has 2ú, so there's no need to make this more complicated
-day_ord = "1d" | "2a" | day_num "ú".utf8 | day_num "adh";
+day_ord = o.simple_ord;
 
 day = day_num | day_ord;
 
@@ -28,11 +29,11 @@ dmy =
   u.D[" "+]
   u.I[q " month: " q]
   month
-  u.D[","]?
+  (u.D[","]?
   u.D[" "+]
   u.I[q " year: " q]
   year
-  u.I[q]
+  u.I[q])?
   u.I[" preserve_order: true"]
   u.I[" }"];
 
