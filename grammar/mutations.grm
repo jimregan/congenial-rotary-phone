@@ -48,3 +48,14 @@ uv_uc = ("A".utf8 : "nA".utf8) |
 	("Ó".utf8 : "nÓ".utf8) |
 	("U".utf8 : "nU".utf8) |
 	("Ú".utf8 : "nÚ".utf8);
+
+uv_lu = ("n-a".utf8 : "nA".utf8) |
+	("n-á".utf8 : "nÁ".utf8) |
+	("n-e".utf8 : "nE".utf8) |
+	("n-é".utf8 : "nÉ".utf8) |
+	("n-i".utf8 : "nI".utf8) |
+	("n-í".utf8 : "nÍ".utf8) |
+	("n-o".utf8 : "nO".utf8) |
+	("n-ó".utf8 : "nÓ".utf8) |
+	("n-u".utf8 : "nU".utf8) |
+	("n-ú".utf8 : "nÚ".utf8);
