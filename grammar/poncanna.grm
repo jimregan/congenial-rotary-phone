@@ -39,15 +39,18 @@ deponcs = CDRewrite[
 	(poncanna | Poncanna),
 	"",
 	"",
-	u.whole_alphabet_ponc*,
-	'ltr', 'obl'];
+	u.whole_alphabet_ponc*];
+reponcs = CDRewrite[
+	(Invert[poncanna] | Invert[Poncanna] | Invert[PONCANNA]),
+	"",
+	"",
+	u.whole_alphabet_ponc*];
 
 fix_h = CDRewrite[
 	("h".utf8 : "H".utf8),
 	("B" | "C" | "D" | "F" | "G" | "M" | "P" | "S" | "T"),
 	u.ALPHABET_PONCANNA | "[EOS]",
-	u.whole_alphabet_ponc*,
-	'rtl', 'obl'];
+	u.whole_alphabet_ponc*];
 
 export deponc = Optimize[deponcs @ fix_h];
-export reponc = Optimize[Invert[deponc]];
+export reponc = Optimize[reponcs];
