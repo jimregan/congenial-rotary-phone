@@ -1,3 +1,8 @@
+# Copyright 2020 Jim O'Regan
+# Apache 2.0
+
+import 'utf8.grm' as u;
+
 poncanna = (("ḃ".utf8 : "bh".utf8) |
 	("ċ".utf8 : "ch".utf8) |
 	("ḋ".utf8 : "dh".utf8) |
@@ -27,3 +32,34 @@ Poncanna = (("Ḃ".utf8 : "Bh".utf8) |
 	("Ṗ".utf8 : "Ph".utf8) |
 	("Ṡ".utf8 : "Sh".utf8) |
 	("Ṫ".utf8 : "Th".utf8));
+
+punct_inner = ("ʼ".utf8 | "’".utf8 | "-".utf8 | "\'".utf8);
+
+deponcs = CDRewrite[
+	(poncanna | Poncanna),
+	"",
+	punct_inner? u.alphabet_poncanna,
+	u.whole_alphabet_ponc*,
+	'ltr', 'obl'];
+deponce = CDRewrite[
+	(poncanna | Poncanna),
+	u.alphabet_poncanna punct_inner?,
+	"",
+	u.whole_alphabet_ponc*,
+	'ltr', 'obl'];
+
+DEPONCS = CDRewrite[
+	PONCANNA,
+	"",
+	punct_inner? u.ALPHABET_PONCANNA,
+	u.whole_alphabet_ponc*,
+	'rtl', 'obl'];
+DEPONCE = CDRewrite[
+	PONCANNA,
+	u.ALPHABET_PONCANNA punct_inner?,
+	"",
+	u.whole_alphabet_ponc*,
+	'rtl', 'obl'];
+
+export deponc = Optimize[deponcs | deponce | DEPONCS | DEPONCE];
+export reponc = Optimize[Invert[deponc]];
