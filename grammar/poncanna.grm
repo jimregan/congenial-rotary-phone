@@ -49,7 +49,7 @@ reponcs = CDRewrite[
 fix_h = CDRewrite[
 	("h".utf8 : "H".utf8),
 	("B" | "C" | "D" | "F" | "G" | "M" | "P" | "S" | "T"),
-	u.ALPHABET_PONCANNA | "[EOS]",
+	punct_inner? u.ALPHABET_PONCANNA | (u.u8_punct - punct_inner) | "[EOS]",
 	u.whole_alphabet_ponc*];
 
 export deponc = Optimize[deponcs @ fix_h];
