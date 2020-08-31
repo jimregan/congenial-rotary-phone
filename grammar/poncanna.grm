@@ -1,0 +1,29 @@
+poncanna = (("ḃ".utf8 : "bh".utf8) |
+	("ċ".utf8 : "ch".utf8) |
+	("ḋ".utf8 : "dh".utf8) |
+	("ḟ".utf8 : "fh".utf8) |
+	("ġ".utf8 : "gh".utf8) |
+	("ṁ".utf8 : "mh".utf8) |
+	("ṗ".utf8 : "ph".utf8) |
+	("ṡ".utf8 : "sh".utf8) |
+	("ṫ".utf8 : "th".utf8));
+
+PONCANNA = (("Ḃ".utf8 : "BH".utf8) |
+	("Ċ".utf8 : "CH".utf8) |
+	("Ḋ".utf8 : "DH".utf8) |
+	("Ḟ".utf8 : "FH".utf8) |
+	("Ġ".utf8 : "GH".utf8) |
+	("Ṁ".utf8 : "MH".utf8) |
+	("Ṗ".utf8 : "PH".utf8) |
+	("Ṡ".utf8 : "SH".utf8) |
+	("Ṫ".utf8 : "TH".utf8));
+
+Poncanna = (("Ḃ".utf8 : "Bh".utf8) |
+	("Ċ".utf8 : "Ch".utf8) |
+	("Ḋ".utf8 : "Dh".utf8) |
+	("Ḟ".utf8 : "Fh".utf8) |
+	("Ġ".utf8 : "Gh".utf8) |
+	("Ṁ".utf8 : "Mh".utf8) |
+	("Ṗ".utf8 : "Ph".utf8) |
+	("Ṡ".utf8 : "Sh".utf8) |
+	("Ṫ".utf8 : "Th".utf8));
