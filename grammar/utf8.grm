@@ -11,12 +11,24 @@ export alphabet = Optimize[
 	"p".utf8 | "q".utf8 | "r".utf8 | "s".utf8 | "t".utf8 | "u".utf8 |
 	"ú".utf8 | "v".utf8 | "w".utf8 | "x".utf8 | "y".utf8 | "z".utf8 ];
 
+poncanna = Optimize[
+	"ḃ".utf8 | "ċ".utf8 | "ḋ".utf8 | "ḟ".utf8 | "ġ".utf8 | "ṁ".utf8 |
+	"ṗ".utf8 | "ṡ".utf8 | "ṫ".utf8 ];
+
+export alphabet_poncanna = Optimize[alphabet | poncanna];
+
 export ALPHABET = Optimize[
 	"A".utf8 | "Á".utf8 | "B".utf8 | "C".utf8 | "D".utf8 | "E".utf8 |
 	"É".utf8 | "F".utf8 | "G".utf8 | "H".utf8 | "I".utf8 | "J".utf8 |
 	"K".utf8 | "L".utf8 | "M".utf8 | "N".utf8 | "O".utf8 | "Ó".utf8 |
 	"P".utf8 | "Q".utf8 | "R".utf8 | "S".utf8 | "T".utf8 | "U".utf8 |
 	"Ú".utf8 | "V".utf8 | "W".utf8 | "X".utf8 | "Y".utf8 | "Z".utf8 ];
+
+PONCANNA = Optimize[
+	"Ḃ".utf8 | "Ċ".utf8 | "Ḋ".utf8 | "Ḟ".utf8 | "Ġ".utf8 | "Ṁ".utf8 |
+	"Ṗ".utf8 | "Ṡ".utf8 | "Ṫ".utf8 ];
+
+export ALPHABET_PONCANNA = Optimize[ALPHABET | PONCANNA];
 
 export to_lower_basic_char = Optimize[
 	("A".utf8 : "a".utf8) | ("Á".utf8 : "á".utf8) | ("B".utf8 : "b".utf8) |
