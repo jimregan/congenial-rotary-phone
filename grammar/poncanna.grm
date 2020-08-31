@@ -38,28 +38,16 @@ punct_inner = ("ʼ".utf8 | "’".utf8 | "-".utf8 | "\'".utf8);
 deponcs = CDRewrite[
 	(poncanna | Poncanna),
 	"",
-	punct_inner? u.alphabet_poncanna,
-	u.whole_alphabet_ponc*,
-	'ltr', 'obl'];
-deponce = CDRewrite[
-	(poncanna | Poncanna),
-	u.alphabet_poncanna punct_inner?,
 	"",
 	u.whole_alphabet_ponc*,
 	'ltr', 'obl'];
 
-DEPONCS = CDRewrite[
-	PONCANNA,
-	"",
-	punct_inner? u.ALPHABET_PONCANNA,
-	u.whole_alphabet_ponc*,
-	'rtl', 'obl'];
-DEPONCE = CDRewrite[
-	PONCANNA,
-	u.ALPHABET_PONCANNA punct_inner?,
-	"",
+fix_h = CDRewrite[
+	("h".utf8 : "H".utf8),
+	("B" | "C" | "D" | "F" | "G" | "M" | "P" | "S" | "T"),
+	u.ALPHABET_PONCANNA | "[EOS]",
 	u.whole_alphabet_ponc*,
 	'rtl', 'obl'];
 
-export deponc = Optimize[deponcs | deponce | DEPONCS | DEPONCE];
+export deponc = Optimize[deponcs @ fix_h];
 export reponc = Optimize[Invert[deponc]];
